@@ -1,6 +1,7 @@
 # ulordrig
 
 ulordrig is a high performance Ulord CPU miner, with official support for Linux and Windows.
+ulordrig support Android system now.
 
 #### Table of contents
 * [Features](#features)
