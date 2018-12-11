@@ -1,0 +1,23 @@
+# 2018/12/11 Patrick Mei add building for ulordrig-armv7
+- CentOS7 prerequisites(Android NDK)
+	- download android-ndk-r16b-linux-x86_64.zip and sdk-tools-linux-3859397.zip, unzip...
+	- edit /etc/profile like:
+		- export ANDROID_NDK_HOME=/root/android/android-ndk-r16b
+		- export PATH=$ANDROID_NDK_HOME:$PATH
+		- export PATH=/root/android/platform-tools:$PATH
+	- source /etc/profile
+- CentOS7 build
+	- cd ulordrig-armv7
+	- cd jni
+	- ndk-build
+	- cd ..
+- CENTOS7 test android-armv7
+	- cd libs/armeabi-v7a
+	- cp ../../jni/src/config.json .
+	- adb connect xx.xx.xx.xx
+	- adb push config.json /data/local
+	- adb push ulordrig-armv7 /data/local
+	- adb shell
+	- cd /data/local
+	- ./ulordrig-armv7
+
