@@ -19,5 +19,6 @@
 	- adb push ulordrig-armv7 /data/local
 	- adb shell
 	- cd /data/local
+	- chmod 755 ulordrig-armv7
 	- ./ulordrig-armv7
 
